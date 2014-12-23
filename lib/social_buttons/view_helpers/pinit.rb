@@ -16,10 +16,11 @@ module SocialButtons
       query_string  = clazz.options_to_query_string(self, params)
       option_params = params.except(:url, :media, :description)
       pinit_link    = PINIT_CREATE_BUTTON + query_string
+      button_image  = options[:icon] ? options[:icon] : PINIT_BUTTON_IMAGE
 
       html = "".html_safe
       html << link_to(pinit_link, option_params) do
-        image_tag PINIT_BUTTON_IMAGE, border: ("0" || options[:border]), title: (TITLE || options[:title])
+        image_tag button_image, border: ("0" || options[:border]), title: (TITLE || options[:title])
       end
       html << clazz::Scripter.new(self).script
       html
@@ -36,7 +37,7 @@ module SocialButtons
     class Scripter < SocialButtons::Scripter
       def script
         return empty_content if widgetized? :pinit
-        widgetized! :pinit        
+        widgetized! :pinit
         "<script src=#{pinit_js} type='text/javascript'></script>".html_safe
       end
 
