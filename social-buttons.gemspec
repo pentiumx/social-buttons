@@ -41,7 +41,7 @@ Gem::Specification.new do |s|
     "lib/social_buttons/view_helpers/scripter.rb",
     "lib/social_buttons/view_helpers/tweet.rb",
     "lib/social_buttons/view_helpers/vkontakte.rb",
-    "social-buttons-0.3.8.gem",
+    #"social-buttons-0.3.8.gem",
     "social-buttons.gemspec",
     "spec/social_buttons/config_spec.rb",
     "spec/social_buttons/google_plus_spec.rb",
