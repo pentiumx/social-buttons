@@ -2,7 +2,8 @@ module SocialButtons
   module Pinit
     include SocialButtons::Assistant
 
-    PINIT_CREATE_BUTTON = "http://pinterest.com/pin/create/button/"
+    # http://stackoverflow.com/questions/11312923/custom-pinterest-button-for-custom-url-text-link-image-or-both
+    PINIT_CREATE_BUTTON = "http://pinterest.com/pin/create%2Fbutton/"
     PINIT_BUTTON_IMAGE  = "http://assets.pinterest.com/images/PinExt.png"
     CLASS = "pin-it-button"
     TITLE = "Pin It"
